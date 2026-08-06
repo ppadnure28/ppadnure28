@@ -1,0 +1,10 @@
+C:\Quantumsoft\tiffino_user_review\src\main\java\com\tiffino\review\config\WebConfig.java
+C:\Quantumsoft\tiffino_user_review\src\main\java\com\tiffino\review\controller\ReviewController.java
+C:\Quantumsoft\tiffino_user_review\src\main\java\com\tiffino\review\dto\ReviewRequestDTO.java
+C:\Quantumsoft\tiffino_user_review\src\main\java\com\tiffino\review\dto\ReviewResponseDTO.java
+C:\Quantumsoft\tiffino_user_review\src\main\java\com\tiffino\review\dto\ReviewUpdateDTO.java
+C:\Quantumsoft\tiffino_user_review\src\main\java\com\tiffino\review\model\Review.java
+C:\Quantumsoft\tiffino_user_review\src\main\java\com\tiffino\review\repository\ReviewRepository.java
+C:\Quantumsoft\tiffino_user_review\src\main\java\com\tiffino\review\service\ReviewService.java
+C:\Quantumsoft\tiffino_user_review\src\main\java\com\tiffino\review\service\ReviewServiceImpl.java
+C:\Quantumsoft\tiffino_user_review\src\main\java\com\tiffino\review\TiffinoUserReviewApplication.java
