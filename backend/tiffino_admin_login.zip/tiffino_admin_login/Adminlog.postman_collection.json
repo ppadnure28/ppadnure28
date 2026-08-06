@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "9dc39e0b-88c3-4d6d-8dcc-57d4e2cf4fcb",
+		"name": "Adminlog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "36989389"
+	},
+	"item": [
+		{
+			"name": "Admin Login",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"siddharamnarasgonde901@gmail.com.com\",\r\n    \"newPassword\": \"Newpass123\",\r\n    \"reEnterPassword\": \"Newpass123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/admin/reset-password"
+			},
+			"response": []
+		}
+	]
+}
