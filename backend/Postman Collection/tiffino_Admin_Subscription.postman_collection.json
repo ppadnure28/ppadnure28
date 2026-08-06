@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "9ede5ff8-9976-4aff-82e6-db8416a652d2",
+		"name": "tiffino_Admin_Subscription",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47282135",
+		"_collection_link": "https://sahilap012-6951025.postman.co/workspace/Sahil-Pathan's-Workspace~f308a609-02e3-4132-8327-9c0e48112898/collection/47282135-9ede5ff8-9976-4aff-82e6-db8416a652d2?action=share&source=collection_link&creator=47282135"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "Active Subscription",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9084/api/admin/subscriptions?status=ACTIVE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9084",
+							"path": [
+								"api",
+								"admin",
+								"subscriptions"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "ACTIVE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActiveSubscriptionId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/api/admin/subscriptions/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"api",
+								"admin",
+								"subscriptions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subscription",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9084/api/admin/subscriptions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9084",
+							"path": [
+								"api",
+								"admin",
+								"subscriptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TotalCount",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9084/api/admin/subscriptions/count",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9084",
+							"path": [
+								"api",
+								"admin",
+								"subscriptions",
+								"count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Expiring Soon",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9084/api/admin/subscriptions/expiring-soon?days=33",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9084",
+							"path": [
+								"api",
+								"admin",
+								"subscriptions",
+								"expiring-soon"
+							],
+							"query": [
+								{
+									"key": "days",
+									"value": "33"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delete",
+			"item": [
+				{
+					"name": "Del-Subscription",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9084/api/admin/subscriptions/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9084",
+							"path": [
+								"api",
+								"admin",
+								"subscriptions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,669 @@
+{
+	"info": {
+		"_postman_id": "a9cb9059-f1b5-442d-8f74-8809d44fd0a9",
+		"name": "Tiffino-User_Login",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47282135",
+		"_collection_link": "https://sahilap012-6951025.postman.co/workspace/Sahil-Pathan's-Workspace~f308a609-02e3-4132-8327-9c0e48112898/collection/47282135-a9cb9059-f1b5-442d-8f74-8809d44fd0a9?action=share&source=collection_link&creator=47282135"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "sent-otp",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"sahilap@gmail.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/log/auth/send-otp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"log",
+								"auth",
+								"send-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify-otp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"aniketsuryvanshi1922@gmail.com\",\r\n  \"otp\": \"898729\"       \r\n  \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/log/auth/verify-otp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"log",
+								"auth",
+								"verify-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"aniketsuryvanshi1922@gmail.com\",       \r\n  \"password\": \"pas123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/log/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"log",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"sahilap012@gmail.com\",\r\n  \"password\": \"Pass@123\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8081/log/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"log",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"sahilap012@gmail.com\"      \r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8081/log/user/forgotPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"log",
+								"user",
+								"forgotPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"sahilap012@gmail.com\", \r\n  \"otp\":\"846856\",\r\n  \"newPassword\": \"Pass@123\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8081/log/user/resetPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"log",
+								"user",
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYWhpbGFwMDEyQGdtYWlsLmNvbSIsImlhdCI6MTc2MTgyMTIzNywiZXhwIjoxNzYxOTA3NjM3fQ.A-0HLVJ4EJ5qrja93BquTzYWvxFdHKxrSvO5DJ_OCSo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/log/user/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"log",
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/log/user/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"log",
+								"user",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by email",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYWhpbGFwMDEyQGdtYWlsLmNvbSIsImlhdCI6MTc2MTgyMTIzNywiZXhwIjoxNzYxOTA3NjM3fQ.A-0HLVJ4EJ5qrja93BquTzYWvxFdHKxrSvO5DJ_OCSo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/log/user/email?email=sahilap012@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"log",
+								"user",
+								"email"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "sahilap012@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by phone",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYWhpbGFwMDEyQGdtYWlsLmNvbSIsImlhdCI6MTc2MTgyMTIzNywiZXhwIjoxNzYxOTA3NjM3fQ.A-0HLVJ4EJ5qrja93BquTzYWvxFdHKxrSvO5DJ_OCSo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/log/user/phone?phone=9577162462",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"log",
+								"user",
+								"phone"
+							],
+							"query": [
+								{
+									"key": "phone",
+									"value": "9577162462"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by name",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/log/user/name?name=Sahil Pathan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"log",
+								"user",
+								"name"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Sahil Pathan"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "statistics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/log/user/stats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"log",
+								"user",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update details",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Sahil Pathan\",\r\n  \"mobile\": \"9577162462\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/log/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"log",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/log/user/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"log",
+								"user",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzb25hd2E4MzM5QGZpbnRlaHMuY29tIiwiaWF0IjoxNzYxMTE4MDI1LCJleHAiOjE3NjEyMDQ0MjV9._kTZNTJE0DDlh3tC2DxQyOMmwmn5otf0mX--j3IHUSc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"sonawa8339@fintehs.com\",\r\n  \"password\": \"New@123\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8081/log/auth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"log",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Address",
+			"item": [
+				{
+					"name": "Add Address JWT",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYWhpbGFwMDEyQGdtYWlsLmNvbSIsImlhdCI6MTc2MTgyMTIzNywiZXhwIjoxNzYxOTA3NjM3fQ.A-0HLVJ4EJ5qrja93BquTzYWvxFdHKxrSvO5DJ_OCSo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer{{eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWlzaG5hdnBhdGlsMDcwOEBnbWFpbC5jb20iLCJpYXQiOjE3NTk4MzI3MDEsImV4cCI6MTc1OTkxOTEwMX0.JrPWE3L893Js8l6GcDx_4q1H_PLAb_WMmIBQp_X6wzQ}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"flatNoOrBuildingName\": \"Nagar\",\r\n  \"street\": \"MG Road\",\r\n  \"landmark\": \"Near City Malls\",\r\n  \"city\": \"Nagar\",\r\n  \"state\": \"Maharashtra\",\r\n  \"pincode\": \"411001\",\r\n  \"type\": \"Home\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/log/addresses/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"log",
+								"addresses",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Address for loged in user",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYWhpbGFwMDEyQGdtYWlsLmNvbSIsImlhdCI6MTc2MTgyMTIzNywiZXhwIjoxNzYxOTA3NjM3fQ.A-0HLVJ4EJ5qrja93BquTzYWvxFdHKxrSvO5DJ_OCSo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9090/log/addresses/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"log",
+								"addresses",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update address for loged in user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmlrZXRzdXJ5dmFuc2hpMTkyMkBnbWFpbC5jb20iLCJpYXQiOjE3NTk4MzUwOTUsImV4cCI6MTc1OTkyMTQ5NX0.Be6JBIBimVQSbC2VhZGGBcqaQF4JluyX1BFzwnGmnr8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"street\": \"New Street Name\",\r\n  \"city\": \" new Pune\",\r\n  \"pincode\": \"411001\",\r\n  \"type\": \"Home\",\r\n  \"flatNoOrBuildingName\": \"Sai Residency, Flat 302\",\r\n  \"landmark\": \"Near City \",\r\n  \"state\": \"Maharashtra\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8081/log/addresses/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"log",
+								"addresses",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmlrZXRzdXJ5dmFuc2hpMTkyMkBnbWFpbC5jb20iLCJpYXQiOjE3NTk4MzUwOTUsImV4cCI6MTc1OTkyMTQ5NX0.Be6JBIBimVQSbC2VhZGGBcqaQF4JluyX1BFzwnGmnr8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8081/log/addresses/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"log",
+								"addresses",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

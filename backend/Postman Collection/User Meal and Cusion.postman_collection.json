@@ -1,0 +1,380 @@
+{
+	"info": {
+		"_postman_id": "4c2d3cb6-ce93-4ed1-99ef-f1aaa325069e",
+		"name": "User Meal and Cusion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47282135",
+		"_collection_link": "https://sahilap012-6951025.postman.co/workspace/Sahil-Pathan's-Workspace~f308a609-02e3-4132-8327-9c0e48112898/collection/47282135-4c2d3cb6-ce93-4ed1-99ef-f1aaa325069e?action=share&source=collection_link&creator=47282135"
+	},
+	"item": [
+		{
+			"name": "User Meal",
+			"item": [
+				{
+					"name": "Post Meal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Paneer Butter Masala\",\r\n  \"description\": \"Delicious North Indian curry made with cottage cheese and creamy tomato gravy.\",\r\n  \"price\": 220.0,\r\n  \"availableDate\": \"2025-10-28\",\r\n  \"cuisineId\": 1,\r\n  \"ingredientIds\": [1, 2, 3]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/menu/meals",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"menu",
+								"meals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update meal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Modur Pulao\",\r\n    \"description\": \"A traditional Kashmiri sweet rice dish made with saffron, dry fruits, and ghee.\",\r\n    \"cuisine_id\": 1,\r\n    \"cuisineName\": \"Kashmiri\",\r\n    \"isVegetarian\": true,\r\n    \"isVegan\": false,\r\n    \"isNonVegetarian\": false,\r\n    \"spiceLevel\": \"low\",\r\n    \"imageUrl\": \"https://tse2.mm.bing.net/th/id/OIP.LKj-ZzM1HzBbbOSkTuYtAQHaE8?pid=Api&P=0&h=180\",\r\n    \"nutritionalInfo\": \"Rich in carbohydrates and dry fruits, provides energy and essential nutrients.\",\r\n    \"calories\": 400,\r\n    \"proteins\": 8.0,\r\n    \"fats\": 12.0,\r\n    \"carbohydrates\": 70.0,\r\n    \"availableDate\":\"2025-09-30\",\r\n    \"createdAt\": \"2025-09-29T22:58:14.525487\",\r\n    \"updatedAt\": \"2025-09-30T09:22:59.330806\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/menu/cuisines/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"menu",
+								"cuisines",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get meal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/menu/cuisines",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"menu",
+								"cuisines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete meal",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/menu/cuisines/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"menu",
+								"cuisines",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Ingredient",
+			"item": [
+				{
+					"name": "update ingredients",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Tomato\",\r\n  \"quantity\": \"3 kg\",\r\n  \"unit\": \"kg\",\r\n  \"description\": \"Updated quantity of fresh tomatoes\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/menu/ingredients/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"menu",
+								"ingredients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete ingredients",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n  \"name\": \"Basmati Rice\",\r\n  \"allergen\": false\r\n}\r\n\r\n \r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8082/menu/ingredients/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"menu",
+								"ingredients",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all ingredients",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/menu/ingredients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"menu",
+								"ingredients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add ingredients",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Tomato\",\r\n  \"quantity\": \"2 kg\",\r\n  \"unit\": \"kg\",\r\n  \"description\": \"Fresh red tomatoes used in multiple dishes\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/menu/ingredients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"menu",
+								"ingredients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add ingredients bulk",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"name\": \"Onion\",\r\n    \"quantity\": \"5 kg\",\r\n    \"unit\": \"kg\",\r\n    \"description\": \"Fresh onions for curries and salads\"\r\n  },\r\n  {\r\n    \"name\": \"Cheese\",\r\n    \"quantity\": \"3 blocks\",\r\n    \"unit\": \"block\",\r\n    \"description\": \"Mozzarella cheese for pizzas\"\r\n  }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/menu/ingredients/bulk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"menu",
+								"ingredients",
+								"bulk"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Cuisine",
+			"item": [
+				{
+					"name": "http://localhost:8082/api/cuisines",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/cuisines",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"cuisines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/api/cuisines/7",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n  \"name\": \"Awadhi\",\r\n  \"description\": \"Traditional cuisine from Uttar Pradesh with rich flavors, kebabs, biryanis, and sweets.\",\r\n  \"originState\": \"Uttar Pradesh\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/cuisines/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"cuisines",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/api/cuisines/1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Kashmiri\",\r\n  \"description\": \"Rich Kashmiri cuisine with aromatic spices and Rogan Josh as a signature dish.\",\r\n  \"originState\": \"Jammu Kashmiri\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/cuisines/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"cuisines",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8082/api/cuisines",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/cuisines/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"cuisines",
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

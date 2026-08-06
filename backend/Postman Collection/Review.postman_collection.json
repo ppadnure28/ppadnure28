@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "b28a8273-29c7-4b60-98e1-3b8ad20b1ef8",
+		"name": "Review",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47282135",
+		"_collection_link": "https://sahilap012-6951025.postman.co/workspace/Sahil-Pathan's-Workspace~f308a609-02e3-4132-8327-9c0e48112898/collection/47282135-b28a8273-29c7-4b60-98e1-3b8ad20b1ef8?action=share&source=collection_link&creator=47282135"
+	},
+	"item": [
+		{
+			"name": "Create review",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": 10,\r\n  \"mealId\": 1234,\r\n  \"orderId\": 2032,\r\n  \"rating\": 2,\r\n  \"comment\": \"Not good,the food is cold\",\r\n  \"status\": \"DISAPPROVED\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all reviews",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "review by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/reviews/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"reviews",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "review by mealid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/reviews/meal/1234",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"reviews",
+						"meal",
+						"1234"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update review",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"reviewId\":1,\r\n \"userId\":3,\r\n \"comment\":\"it's average,could be better\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/reviews/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"reviews",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Review",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/reviews/23",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"reviews",
+						"23"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Avg rating",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/reviews/meal/101/avg-rating",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"reviews",
+						"meal",
+						"101",
+						"avg-rating"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

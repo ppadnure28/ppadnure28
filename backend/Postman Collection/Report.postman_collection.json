@@ -1,0 +1,31 @@
+{
+	"info": {
+		"_postman_id": "3b4f1387-46d7-48ec-bcd4-06f008c04368",
+		"name": "Report",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47282135",
+		"_collection_link": "https://sahilap012-6951025.postman.co/workspace/Sahil-Pathan's-Workspace~f308a609-02e3-4132-8327-9c0e48112898/collection/47282135-3b4f1387-46d7-48ec-bcd4-06f008c04368?action=share&source=collection_link&creator=47282135"
+	},
+	"item": [
+		{
+			"name": "Get Report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9086/analytics/summary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"analytics",
+						"summary"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

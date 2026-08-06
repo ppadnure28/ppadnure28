@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "345a6176-e3c4-4f59-8098-36ef6a22ca77",
+		"name": "Admin_order",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47282135",
+		"_collection_link": "https://sahilap012-6951025.postman.co/workspace/Sahil-Pathan's-Workspace~f308a609-02e3-4132-8327-9c0e48112898/collection/47282135-345a6176-e3c4-4f59-8098-36ef6a22ca77?action=share&source=collection_link&creator=47282135"
+	},
+	"item": [
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Assign Delivery Partner",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"partnerId\":5\r\n  \r\n  \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9083/ordr/orders/2/assign",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9083",
+							"path": [
+								"ordr",
+								"orders",
+								"2",
+								"assign"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "All order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/ordr/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"ordr",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Orders by Status",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"success\": true,\r\n  \"message\": \"Orders filtered by status\",\r\n  \"data\": [\r\n    {\r\n      \"id\": 4,\r\n      \"customerName\": \"Amit\",\r\n      \"status\": \"DELIVERED\",\r\n      \"createdAt\": \"2025-10-06T17:00:00Z\",\r\n      \"items\": [\r\n        { \"name\": \"Veg Biryani\", \"quantity\": 1, \"price\": 180.0 }\r\n      ]\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/ordr/orders?status=DELIVERED",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"ordr",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "DELIVERED"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Order by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"partnerId\": 1\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:9083/ordr/orders/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9083",
+							"path": [
+								"ordr",
+								"orders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Orders by Date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9083/ordr/orders?date=2025-10-09",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9083",
+							"path": [
+								"ordr",
+								"orders"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2025-10-09"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order Timeline",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9083/ordr/orders/2/timeline",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9083",
+							"path": [
+								"ordr",
+								"orders",
+								"2",
+								"timeline"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Total Orders Count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/ordr/orders/count",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"ordr",
+								"orders",
+								"count"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Rejection Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9083/ordr/orders/1/rejection",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9083",
+							"path": [
+								"ordr",
+								"orders",
+								"1",
+								"rejection"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PUT",
+			"item": [
+				{
+					"name": "UPDATE STATUS",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": \"DELIVERED\",\r\n  \"reason\": \"Customer accepted the order\",\r\n  \"riderName\": \"Ravi Kumar\",\r\n  \"riderPhone\": \"9876543210\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9083/ordr/order/2/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9083",
+							"path": [
+								"ordr",
+								"order",
+								"2",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order Reject",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": \"DELIVERED\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9083/ordr/orders/1/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9083",
+							"path": [
+								"ordr",
+								"orders",
+								"1",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

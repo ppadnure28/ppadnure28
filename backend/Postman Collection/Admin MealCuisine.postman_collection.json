@@ -1,0 +1,350 @@
+{
+	"info": {
+		"_postman_id": "8d5f68c7-3486-4ea1-87d8-569a1838a610",
+		"name": "Admin MealCuisine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47282135",
+		"_collection_link": "https://sahilap012-6951025.postman.co/workspace/Sahil-Pathan's-Workspace~f308a609-02e3-4132-8327-9c0e48112898/collection/47282135-8d5f68c7-3486-4ea1-87d8-569a1838a610?action=share&source=collection_link&creator=47282135"
+	},
+	"item": [
+		{
+			"name": "Cuisine",
+			"item": [
+				{
+					"name": "Post Cisines",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n        \"cuisineName\": \"Idli Sambar\",\r\n        \"region\": \"South India\",\r\n        \"state\": \"Tamil Nadu\"          \r\n}         \r\n \r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9082/meal/cuisines",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9082",
+							"path": [
+								"meal",
+								"cuisines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cuisine By Region",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9082/meal/cuisines/region/South India",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9082",
+							"path": [
+								"meal",
+								"cuisines",
+								"region",
+								"South India"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Cuisine Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/meal/cuisines/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"meal",
+								"cuisines",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cuisine By State",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9082/meal/cuisines/state/Tamil Nadu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9082",
+							"path": [
+								"meal",
+								"cuisines",
+								"state",
+								"Tamil Nadu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cuisine by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n        \"cuisineName\": \"Rogan Josh\",\r\n        \"region\": \"Northern India\",\r\n        \"state\": \"Jammu & Kashmir\"          \r\n}         \r\n \r\n\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:9082/meal/cuisines/id/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9082",
+							"path": [
+								"meal",
+								"cuisines",
+								"id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put cuisine by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"cuisineName\": \"Poha Jalebi\",\r\n    \"region\": \"Central India\",\r\n    \"state\": \"Madhya Pradesh\",\r\n    \"meals\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9082/meal/cuisines/id/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9082",
+							"path": [
+								"meal",
+								"cuisines",
+								"id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Meal",
+			"item": [
+				{
+					"name": "Post meal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n\n{\n  \"mealName\": \"Rogan Josh\",\n  \"mealType\": \"Dinner\",\n  \"description\": \"A flavorful and aromatic Kashmiri curry made with tender lamb pieces simmered in a rich yogurt and spice gravy.\",\n  \"imageUrl\": \"https://example.com/rogan-josh.jpg\",\n  \"mealCategory\": \"NonVeg\",\n  \"nutritionInfo\": \"High protein, moderate fat, 400 calories per serving\",\n  \"mealPrice\": 350.00,\n  \"ingredients\": [\"Lamb\", \"Yogurt\", \"Ginger\", \"Garlic\", \"Spices\"],\n  \"allergens\": [\"Dairy\"],\n  \"cuisine\": {\n    \"id\": 1\n  }\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9082/admin/meals",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9082",
+							"path": [
+								"admin",
+								"meals"
+							]
+						},
+						"description": "Generated from cURL: curl -X POST http://localhost:8080/admin/meals \\\n-H \"Content-Type: application/json\" \\\n-d '{\n  \"mealName\": \"Paneer Butter Masala\",\n  \"mealType\": \"Main Course\",\n  \"description\": \"Delicious North Indian curry made with paneer and butter.\",\n  \"imageUrl\": \"https://example.com/paneer.jpg\",\n  \"mealCategory\": \"Veg\",\n  \"nutritionInfo\": \"Protein-rich, 350 calories per serving\",\n  \"mealPrice\": 220.50,\n  \"ingredients\": [\"Paneer\", \"Tomato\", \"Butter\", \"Cream\", \"Spices\"],\n  \"allergens\": [\"Dairy\"],\n  \"cuisine\": {\n    \"id\": 1\n  }\n}'"
+					},
+					"response": []
+				},
+				{
+					"name": "Get by State",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n\n{\n  \"mealName\": \"Rogan Josh\",\n  \"mealType\": \"Dinner\",\n  \"description\": \"A flavorful and aromatic Kashmiri curry made with tender lamb pieces simmered in a rich yogurt and spice gravy.\",\n  \"imageUrl\": \"https://example.com/rogan-josh.jpg\",\n  \"mealCategory\": \"NonVeg\",\n  \"nutritionInfo\": \"High protein, moderate fat, 400 calories per serving\",\n  \"mealPrice\": 350.00,\n  \"ingredients\": [\"Lamb\", \"Yogurt\", \"Ginger\", \"Garlic\", \"Spices\"],\n  \"allergens\": [\"Dairy\"],\n  \"cuisine\": {\n    \"id\": 1\n  }\n}\n"
+						},
+						"url": {
+							"raw": "http://localhost:9082/admin/meals/state/Madhya Pradesh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9082",
+							"path": [
+								"admin",
+								"meals",
+								"state",
+								"Madhya Pradesh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Region",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9082/admin/meals/region/Central India",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9082",
+							"path": [
+								"admin",
+								"meals",
+								"region",
+								"Central India"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get BY MealName",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mealName\": \"Rogan Josh\",\r\n    \"mealType\": \"Lunch\",\r\n    \"description\": \"Traditional lamb curry from Jammu & Kashmir\",\r\n    \"imageUrl\": \"https://aishcooks.com/wp-content/uploads/2013/11/lamb_rogan_josh_by_aishcooks.jpg\",\r\n    \"mealCategory\": \"NonVeg\",\r\n    \"nutritionInfo\": \"550 kcal\",\r\n    \"mealPrice\": 400,\r\n    \"ingredients\": [\"Lamb\", \"Yogurt\", \"Red Chili\", \"Ginger\", \"Garlic\"],\r\n    \"allergens\": [\"Dairy\"],\r\n    \"cuisine\": {\r\n        \"id\": 1\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9082/admin/meals/name/Rogan Josh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9082",
+							"path": [
+								"admin",
+								"meals",
+								"name",
+								"Rogan Josh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Meal Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9082/admin/meals/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9082",
+							"path": [
+								"admin",
+								"meals",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put By id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete By Meal id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9082/admin/meals/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9082",
+							"path": [
+								"admin",
+								"meals",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

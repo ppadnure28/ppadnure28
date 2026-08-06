@@ -1,0 +1,78 @@
+{
+	"info": {
+		"_postman_id": "4dd0f176-7f7a-404a-9aaa-028eed50f983",
+		"name": "Admin login",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47282135",
+		"_collection_link": "https://sahilap012-6951025.postman.co/workspace/Sahil-Pathan's-Workspace~f308a609-02e3-4132-8327-9c0e48112898/collection/47282135-4dd0f176-7f7a-404a-9aaa-028eed50f983?action=share&source=collection_link&creator=47282135"
+	},
+	"item": [
+		{
+			"name": "Admin Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"sahilap012@gmail.com\",\r\n    \"password\": \"p\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9081/admin/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9081",
+					"path": [
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"sahilap012@gmail.com\",\r\n  \"newPassword\": \"p\",\r\n  \"confirmPassword\": \"p\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9081/admin/reset-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9081",
+					"path": [
+						"admin",
+						"reset-password"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
